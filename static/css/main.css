@@ -17,7 +17,10 @@
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
-  --orange: #fd7e14;
+  --darkorange: #cc630e93;
+  --orange: #ff7300;
+  --orange1: #fa8e00;
+  --orange2: #ff7b00;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -6966,13 +6969,13 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #009688 !important;
+  background-color: var(--cyan) !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #00635a !important;
+  background-color: var(--blue) !important;
 }
 
 .bg-secondary {
@@ -6982,7 +6985,7 @@ button.bg-primary:focus {
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #545b62 !important;
+  background-color: var(--blue) !important;
 }
 
 .bg-success {
@@ -11440,7 +11443,7 @@ fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
 .datepicker table tr td.active.highlighted:hover {
   color: #ffffff;
   background-color: #009688;
-  border-color: #007d71;
+  border-color: orange;
 }
 
 .datepicker table tr td.active:active,
@@ -11451,7 +11454,7 @@ fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
 .open > .dropdown-toggle.datepicker table tr td.active.highlighted {
   color: #ffffff;
   background-color: #009688;
-  border-color: #007d71;
+  border-color: orange;
 }
 
 .datepicker table tr td.active:active:hover,
@@ -13791,7 +13794,7 @@ temporary rendered events).
   line-height: 1.3;
   border-radius: 3px;
   border: 1px solid #009688;
-  background-color: #009688;
+  background-color: var(--orange2);
   font-weight: normal;
   /* undo jqui's ui-widget-header bold */
   margin-bottom: 5px;
@@ -14922,7 +14925,7 @@ be a descendant of the grid when it is being dragged.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #009688;
+  background-color: white ;
   z-index: 1030;
   padding-right: 15px;
 }
@@ -14939,11 +14942,15 @@ be a descendant of the grid when it is being dragged.
   }
 }
 
+.app-header__logo img{
+  height: 50px;
+  margin: 3px;
+}
 .app-header__logo {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  color: #fff;
+  background-color: white;
   text-align: center;
   font-family: 'Niconne';
   padding: 0 15px;
@@ -14959,7 +14966,7 @@ be a descendant of the grid when it is being dragged.
             flex: 0 0 auto;
     display: block;
     width: 230px;
-    background-color: #007d71;
+    background-color: white;
   }
 }
 
@@ -14971,7 +14978,7 @@ be a descendant of the grid when it is being dragged.
 .app-sidebar__toggle {
   padding: 0 15px;
   font-family: fontAwesome;
-  color: #fff;
+  color: var(--orange1);
   line-height: 2.4;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
@@ -14992,8 +14999,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .app-sidebar__toggle:focus, .app-sidebar__toggle:hover {
-  color: #fff;
-  background-color: #00635a;
+  color: orange;
+  background-color: white ;
   text-decoration: none;
 }
 
@@ -15001,6 +15008,7 @@ be a descendant of the grid when it is being dragged.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: white ;
   margin-bottom: 0;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -15019,7 +15027,7 @@ be a descendant of the grid when it is being dragged.
   display: block;
   padding: 15px;
   line-height: 20px;
-  color: #fff;
+  color: var(--orange1);
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
@@ -15085,7 +15093,7 @@ be a descendant of the grid when it is being dragged.
   bottom: 10px;
   padding: 0 10px;
   border: 0;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--orange1);
   background: none;
   cursor: pointer;
 }
@@ -15160,12 +15168,15 @@ be a descendant of the grid when it is being dragged.
   width: 230px;
   overflow: auto;
   z-index: 10;
-  background-color: #222d32;
+  background-color: var(--orange1);
   -webkit-box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
-  -webkit-transition: left 0.3s ease, width 0.3s ease;
-  -o-transition: left 0.3s ease, width 0.3s ease;
-  transition: left 0.3s ease, width 0.3s ease;
+  -webkit-transition: left 0.3s ease,
+ width 0.3s ease;
+  -o-transition: left 0.3s ease,
+ width 0.3s ease;
+  transition: left 0.3s ease,
+ width 0.3s ease;
 }
 
 .app-sidebar::-webkit-scrollbar {
@@ -15242,15 +15253,18 @@ be a descendant of the grid when it is being dragged.
   padding: 12px 15px;
   font-size: 1.08em;
   border-left: 3px solid transparent;
-  -webkit-transition: border-left-color 0.3s ease, background-color 0.3s ease;
-  -o-transition: border-left-color 0.3s ease, background-color 0.3s ease;
-  transition: border-left-color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: border-left-color 0.3s ease,
+ background-color 0.3s ease;
+  -o-transition: border-left-color 0.3s ease,
+ background-color 0.3s ease;
+  transition: border-left-color 0.3s ease,
+ background-color 0.3s ease;
   color: #fff;
 }
 
 .app-menu__item.active, .app-menu__item:hover, .app-menu__item:focus {
   background: #0d1214;
-  border-left-color: #009688;
+  border-left-color: var(--darkorange);
   text-decoration: none;
   color: #fff;
 }
@@ -15270,7 +15284,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .treeview.is-expanded [data-toggle='treeview'] {
-  border-left-color: #009688;
+  border-left-color: var(--darkorange);
   background: #0d1214;
 }
 
@@ -15376,7 +15390,7 @@ be a descendant of the grid when it is being dragged.
   .sidebar-mini.sidenav-toggled .treeview:hover .app-menu__item {
     overflow: visible;
     background: #0d1214;
-    border-left-color: #009688;
+    border-left-color: var(--darkorange);
     color: #fff;
   }
   .sidebar-mini.sidenav-toggled .treeview:hover .app-menu__label {
@@ -16647,7 +16661,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .user .user-tabs .nav-link.active {
-  border-left-color: #009688;
+  border-left-color: var(--darkorange);
   border-bottom: 0;
 }
 
