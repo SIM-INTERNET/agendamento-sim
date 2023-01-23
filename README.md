@@ -3,7 +3,7 @@
 https://www.youtube.com/watch?v=HvnPeeLEVq0&t=0s
 
 # Demo
-![image](static\images\tela inicial.png)
+![image](https://github.com/SIM-INTERNET/agendamento-sim/blob/banco-de-dados/static/images/tela%20inicial.png)
 
 
 ## How To Setup
