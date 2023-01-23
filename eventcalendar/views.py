@@ -19,3 +19,4 @@ class DashboardView(LoginRequiredMixin, View):
             "latest_events": latest_events,
         }
         return render(request, self.template_name, context)
+    ''''''

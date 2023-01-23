@@ -26,10 +26,10 @@ Event Details
             <thead>
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>Name</th>
-                  <th>Username</th>
+                  <th>Nome</th>
+                  <th>Nome do usuário</th>
                   <th>Email</th>
-                  <th>Action</th>
+                  <th>Ação</th>
                 </tr>
               </thead>
               <tbody>
@@ -40,7 +40,7 @@ Event Details
                     <td>{{ member.user.username }}</td>
                     <td>{{ member.user.email }}</td>
                     <td>
-                        <a class="btn btn-danger" href="{% url 'calendarapp:remove_event' member.id %}">Remove</a>
+                        <a class="btn btn-danger" href="{% url 'calendarapp:remove_event' member.id %}">Remover</a>
                     </td>
                 </tr>
                 {% endfor %}

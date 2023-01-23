@@ -4,9 +4,9 @@
 <div class="clearfix">
     <span class="left m-2" style="font-size: 20px;">Bem Vindo, {{ request.user }}</span>
     <a class="btn btn-info right" href="{% url 'accounts:signout' %}"> Sair</a>
-	<a class="btn btn-info right mr-2" href="{% url 'calendarapp:calendar' %}?{{ next_month }} "> Proximo Mês >> </a>
-    <a class="btn btn-info right mr-2" href="{% url 'calendarapp:calendar' %}?{{ prev_month }}"> << Mês anterior </a>
-    <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_new' %}"> + Novo Evento </a>
+	<a class="btn btn-info right " href="{% url 'calendarapp:calendar' %}?{{ next_month }} "> Proximo Mês >> </a>
+    <a class="btn btn-info right " href="{% url 'calendarapp:calendar' %}?{{ prev_month }}"> << Mês anterior </a>
+    <a class="btn btn-info right " href="{% url 'calendarapp:event_new' %}"> + Novo Evento </a>
 </div>
 <div style="color: blueviolet;">
     {{ calendar }}
