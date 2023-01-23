@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
-{% block title %}Event Calendar{% endblock title %}
+{% block title %}Calendário de eventos{% endblock title %}
 
 {% block extracss %}
   <link href="{% static 'calender/main.css' %}" rel="stylesheet" />
@@ -9,11 +9,11 @@
 {% block breadcrumb %}
   <div>
       <h1><i class="fa fa-calendar"></i> Calendar</h1>
-      <p>Event Calendar</p>
+      <p>Calendário de evento</p>
   </div>
   <ul class="app-breadcrumb breadcrumb">
       <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-      <li class="breadcrumb-item"><a href="#">Calendar</a></li>
+      <li class="breadcrumb-item"><a href="#">Calendário</a></li>
   </ul>
 {% endblock breadcrumb %}
 
@@ -60,17 +60,17 @@
                                     {{ form.description }}
                                 </div>
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Start Date:</label>
+                                    <label for="message-text" class="col-form-label">Data de Início:</label>
                                     {{ form.start_time }}
                                 </div>
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">End Date:</label>
+                                    <label for="message-text" class="col-form-label">Data finak:</label>
                                     {{ form.end_time }}
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button id="modalClose2" type="button" class="btn btn-danger">Close</button>
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button id="modalClose2" type="button" class="btn btn-danger">Fechar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
                             </div>
                         </form>
                     </div>
