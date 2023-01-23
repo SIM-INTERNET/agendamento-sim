@@ -1,3 +1,4 @@
+
 {% extends 'base/base.html' %}
 {% load static %}
 
@@ -18,18 +19,18 @@
 <div class="row">
     <div class="col-md-6 col-lg-3">
         <div class="widget-small primary coloured-icon">
-            <i class="icon fa fa-files-o fa-3x"></i>
+            <i class="icon fa fa-calendar-check fa-3x"></i>
             <div class="info">
-                <h4>Total Completed Events</h4>
+                <h4>Confirmados</h4>
                 <p><b>{{ total_event }}</b></p>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-lg-3">
         <div class="widget-small info coloured-icon">
-            <i class="icon fa fa-thumbs-o-up fa-3x"></i>
+            <i class="icon fa fa-check fa-3x"></i>
             <div class="info">
-                <h4>Total Running Events</h4>
+                <h4>Concluidos</h4>
                 <p><b>{{ running_events.count }}</b></p>
             </div>
         </div>
@@ -38,16 +39,16 @@
         <div class="widget-small warning coloured-icon">
             <i class="icon fa fa-users fa-3x"></i>
             <div class="info">
-                <h4>Total Participants</h4>
+                <h4>Tecnicos Disponiveis</h4>
                 <p><b>10</b></p>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-lg-3">
         <div class="widget-small danger coloured-icon">
-            <i class="icon fa fa-star fa-3x"></i>
+            <i class="icon fa fa-calendar-plus fa-3x"></i>
             <div class="info">
-                <h4>Stars</h4>
+                <h4>Reagendados</h4>
                 <p><b>500</b></p>
             </div>
         </div>
