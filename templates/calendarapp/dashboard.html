@@ -40,7 +40,7 @@
             <i class="icon fa fa-users fa-3x"></i>
             <div class="info">
                 <h4>Tecnicos Disponiveis</h4>
-                <p><b>10</b></p>
+                <p><b>{{Tecnicos}}</b></p>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
             <i class="icon fa fa-calendar-plus fa-3x"></i>
             <div class="info">
                 <h4>Reagendados</h4>
-                <p><b>500</b></p>
+                <p><b>{{Reagendados}}</b></p>
             </div>
         </div>
     </div>
@@ -64,91 +64,23 @@
                                     <thead>
                                         <tr role="row">
                                             <th class="sorting_asc" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 261.641px;">HelpDesk</th>
+                                            <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 417.312px;">Descrição</th>
                                             <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 417.312px;">Técnico</th>
                                             <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 189.281px;">Período Agendado</th>
-                                            <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 102.141px;">Status</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+                                            {% for i  in Atendimentos %}
                                             <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Jackson Cavalcante da Silva</td>
-                                                <td>23/01/2023</td>
-                                                <td>Reagendado</td>
+                                                
                                             </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>25/05/2023</td>
-                                                <td>Comcluido</td>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 261.641px;"><a href="{{i.helpdesk}}">{{i.helpdesk}}</a></th>
+                                                <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 417.312px;">{{i.detalhes}}</th>
+                                                <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 417.312px;">{{i.funcionario}}</th>
+                                                <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 189.281px;">{{i.horario}}</th>
                                             </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Alex Pereira Silva Cruz</td>
-                                                <td>27/01/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Guilherme Pereira Silva Crus</td>
-                                                <td>27/02/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>27/01/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>27/01/2023</td>
-                                                <td>Reagendado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>02/02/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>12/04/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>27/01/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>27/01/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>27/01/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>27/01/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1"> <a href="https://web.whatsapp.com/">https://web.whatsapp.com/</a></td>
-                                                <td>Elias pereira junhor</td>
-                                                <td>27/01/2023</td>
-                                                <td>Confirmado</td>
-                                            </tr>
+                                            {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
