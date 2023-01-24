@@ -27,39 +27,68 @@ class EventMemberAdmin(admin.ModelAdmin):
 @admin.register(models.Pessoa)
 class PessoasAdmin(admin.ModelAdmin):
     model = models.Pessoa
-    list_display = ['nome', 'sobrenome', 'cpf', 'data_nascimento', 'numero_de_telefone' ]
+    list_display = [
+        'nome',
+        'cpf',
+        'sexo',
+        'data_nascimento',
+        'estado_civel',
+        'numero_de_telefone',
+        'telefone_e_whatsapp',
+        ]
     list_filter = ["nome"]
+    search_fields = ["nome" , "cpf"]
 
 @admin.register(models.Clientes)
 class ClientAdmin(admin.ModelAdmin):
     model = models.Clientes
     list_display = [
-
-        'rua',
-        'logradouro',
-        'setor',
         'pessoa',
-     ]
-    # list_filter = ["nome"]
+        'cep',
+        'logradouro',
+        'numero',
+        'complemento',
+        'estado',
+        'municipio',
+        'bairro',
+        'divisao_interna',
+        'tipo_de_imovel',
+        
+    ]
+    list_filter = ["pessoa"]
+    search_fields = ["cep" , "pessoa"]
 @admin.register(models.Funcionario)
 class FuncionarioAdmin(admin.ModelAdmin):
     model = models.Funcionario
     list_display = [
+        'pessoa',
         'funcao',
-        'pessoa_id',
-        'pessoa_id1'
+        
     ]
-    # list_filter = ["nome"]
+    search_fields = ["pessoa"]
+
 @admin.register(models.Atendimento)
 class AtendimentoAdmin(admin.ModelAdmin):
     model = models.Atendimento
     list_display = [
-        'horario',
+        'clientes',
+        'helpdesk',
         'detalhes',
+        'horario',
+        'funcionario',
+        'empresa',
+        'reagendado',
         'criado_em',
         'atualizado_em',
-        'reagendado',
-        'funcionario',
-        'clientes']
+        
+        ]
     search_fields = ["detalhes"]
     list_filter = ["atualizado_em"]
+
+@admin.register(models.Empresa)
+class EmpresaAdmin(admin.ModelAdmin):
+    model = models.Empresa
+    list_display = [
+        'nome',
+    ]
+    list_filter = ["nome"]
